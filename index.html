@@ -1,0 +1,26 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DocumentCloud UI Example Add-On</title>
+  <meta name="description" content="A proof of concept for UI Add-Ons">
+  <meta name="author" content="Mitchell Kotler">
+  <link rel="stylesheet" href="https://classless.de/classless-tiny.css">
+</head>
+
+<body>
+  <p id="content"></p>
+  <script>
+    fetch("https://api.www.documentcloud.org/api/users/me/", {
+      credentials: "include",
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+  </script>
+</body>
+</html>
+
