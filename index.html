@@ -17,6 +17,7 @@
   <script>
     fetch("https://api.www.documentcloud.org/api/users/me/", {
       credentials: "include",
+      mode: "cors",
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
