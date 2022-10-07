@@ -13,6 +13,7 @@
 
 <body>
   <p id="content"></p>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
 
     const url = "https://api.www.documentcloud.org/api/users/me/";
@@ -25,6 +26,8 @@
     invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.send();
+
+    axios.get(url, {withCredentials: true}).then((response) => console.log(response));
   </script>
 </body>
 </html>
