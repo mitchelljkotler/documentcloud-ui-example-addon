@@ -14,11 +14,17 @@
 <body>
   <p id="content"></p>
   <script>
-    fetch("https://api.www.documentcloud.org/api/users/me/", {
-      credentials: "include",
-    })
+
+    const url = "https://api.www.documentcloud.org/api/users/me/";
+
+    fetch(url, { credentials: "include"})
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => console.log(data));
+
+    invocation = new XMLHttpRequest();
+    invocation.open("GET", url, true);
+    invocation.withCredentials = true;
+    invocation.send();
   </script>
 </body>
 </html>
